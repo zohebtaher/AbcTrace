@@ -2,7 +2,7 @@
 
 ## Background and overview
 
-Reading and writing difficulties among young children during the pandemic is becoming a major concern. Since most language development is done through handwritten sheets and practice books in school , Technology driven games such as ABCYA (https://www.abcya.com/games/letter_trace) and THE Learning APPs (https://www.thelearningapps.com/alphabet-tracing-game-for-kids/) have become essential in teaching children these important lessons. AbcTrace is inspired by these games, its a tool that allows users to practice tracing letters which evenutally will facilitate reading and writing acquisition in young children.
+Reading and writing difficulties among young children during the pandemic is becoming a major concern. Since most language development is done through handwritten sheets and practice books in school , Technology driven games such as ABCYA https://www.abcya.com/games/letter_trace and THE Learning APPs https://www.thelearningapps.com/alphabet-tracing-game-for-kids/ have become essential in teaching children these important lessons. AbcTrace is inspired by these games, its a tool that allows users to practice tracing letters which evenutally will facilitate reading and writing acquisition in young children.
 
 ## Functionality and MVPs
 
