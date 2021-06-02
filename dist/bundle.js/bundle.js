@@ -1,3 +1,8 @@
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 // import abcTrace from './tool'
 
 // const canvas = document.getElementById('tool-canvas')
@@ -86,3 +91,7 @@ function drawletter(letter) {
 drawletter("A");
 
 // console.log("Webpack is working!");
+
+/******/ })()
+;
+//# sourceMappingURL=bundle.js.map
