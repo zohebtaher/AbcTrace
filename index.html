@@ -6,11 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+
     <title>AbcTrace</title>
   </head>
+  <div class="container-of-all">
+    <div class="header-container">
+      <a href="https://github.com/zohebtaher" target="_blank">
+        <img src="./design_docs/github.png" class="github-icon" />
+      </a>
+      <h1>Tracing Fun</h1>
+      <a
+        href="https://www.linkedin.com/in/mohammad-taher-2b502b5b/"
+        target="_blank"
+      >
+        <img src="./design_docs/linkedin.jpg" class="linkedin-icon" />
+      </a>
+    </div>
+    <div class="canvas-container">
+      <div class="right-container">
+        <h2>Inspiration</h2>
+        <br />
+        <ul>
+          The pandemic has set many children behind in their reading and writing
+          abilities. Tracing Fun is a tool that allows users to trace letters
+          which will facilitate reading and writing acquisiton.
+        </ul>
+      </div>
+      <canvas id="tool-canvas" height="680" width="620"></canvas>
+      <div class="left-container">
+        <h2>Instructions</h2>
+        <br />
 
-  <body>
-    <canvas id="tool-canvas" height="680" width="640"></canvas>
-    <script src="./dist/bundle.js/bundle.js"></script>
-  </body>
+        <ul>
+          Using your mouse or finger press down inside the letter and do not go
+          outside. You will be prompted when you have successfully traced the
+          letter
+        </ul>
+      </div>
+    </div>
+
+    <body>
+      <script src="./dist/bundle.js/bundle.js"></script>
+    </body>
+  </div>
 </html>
