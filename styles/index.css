@@ -50,7 +50,7 @@ canvas {
   height: 100%;
   width: 100%;
   background: #67f5e2;
-  background-image: url("../design_docs/26275.jpg");
+  background-image: url("../design_docs/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -60,7 +60,6 @@ canvas {
     rgba(2, 0, 36, 1) 0%,
     rgba(255, 222, 0, 1) 0%,
     rgba(255, 0, 194, 1) 100% */
-  );
 }
 
 h1 {

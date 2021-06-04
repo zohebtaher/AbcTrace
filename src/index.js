@@ -53,7 +53,7 @@ function totalpixels(r, g, b) {
 }
 
 function calcThreshold() {
-  if (totalpixels(173, 255, 47) / totalpixels(255, 250, 250) > 0.89) {
+  if (totalpixels(250, 121, 56) / totalpixels(255, 250, 250) > 0.92) {
     alert("Yay Good Job !!");
     context.clearRect(0, 0, myPics.width, myPics.height);
     toolSetup();
@@ -120,8 +120,8 @@ function drawLine(context, x1, y1, x2, y2) {
     displayError();
   } else {
     context.beginPath();
-    context.strokeStyle = "rgb(173,255,47)";
-    context.lineWidth = 25;
+    context.strokeStyle = "rgb(250,121,56)";
+    context.lineWidth = 28;
     context.lineCap = "round";
     context.moveTo(x1, y1);
     context.lineTo(x2, y2);
