@@ -1,10 +1,3 @@
-// import abcTrace from './tool'
-
-// const canvas = document.getElementById('tool-canvas')
-
-// new abcTrace(canvas)
-
-// When true, moving the mouse draws on the canvas
 let isDrawing = false;
 let x = 0;
 let y = 0;
@@ -12,19 +5,41 @@ let pixels = null;
 let alphabetpixels = null;
 let alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let letter = null;
+let state = "canvas-container";
+let container = document.querySelector(".canvas-container");
+let winbutton = document.querySelector("#winbutton");
+let errorbutton = document.querySelector("#errorbutton");
 
 function toolSetup() {
   drawletter();
   pixels = context.getImageData(0, 0, myPics.width, myPics.height);
-  //   alphabetpixels = totalpixels(158, 101, 101);
 }
 
 function displayError() {
   isDrawing = false;
-  alert("Oh Oh Try Again !");
+  // alert("Oh Oh Try Again !");
+  display("error");
   context.clearRect(0, 0, myPics.width, myPics.height);
   drawletter(letter);
 }
+function retry() {
+  display("canvas-container");
+  isDrawing = false;
+  x = 0;
+  y = 0;
+  context.clearRect(0, 0, myPics.width, myPics.height);
+  drawletter(letter);
+}
+
+function winner() {
+  display("canvas-container");
+
+  context.clearRect(0, 0, myPics.width, myPics.height);
+  toolSetup();
+}
+
+errorbutton.addEventListener("click", retry, false);
+winbutton.addEventListener("click", winner, false);
 
 function getpixelcolor(x, y) {
   let index = y * (pixels.width * 4) + x * 4;
@@ -54,7 +69,9 @@ function totalpixels(r, g, b) {
 
 function calcThreshold() {
   if (totalpixels(250, 121, 56) / totalpixels(255, 250, 250) > 0.92) {
-    alert("Yay Good Job !!");
+    // alert("Yay Good Job !!");
+    display("win");
+
     context.clearRect(0, 0, myPics.width, myPics.height);
     toolSetup();
   }
@@ -62,6 +79,12 @@ function calcThreshold() {
 
 const myPics = document.getElementById("tool-canvas");
 const context = myPics.getContext("2d");
+
+function display(newstate) {
+  state = newstate;
+  container.className = newstate;
+  currentsate = state;
+}
 
 // event.offsetX, event.offsetY gives the (x,y) offset from the edge of the canvas.
 
