@@ -197,6 +197,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 70px;
 }
 
 .personal:hover {
@@ -205,4 +206,12 @@ footer {
 }
 .personal {
   font-family: "Alfa Slab One", cursive;
+}
+
+footer h1 {
+  font-size: 25px;
+}
+
+footer h2 {
+  font-size: 20px;
 }
