@@ -3,7 +3,6 @@ var __webpack_exports__ = {};
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-// When true, moving the mouse draws on the canvas
 let isDrawing = false;
 let x = 0;
 let y = 0;
@@ -19,7 +18,6 @@ let errorbutton = document.querySelector("#errorbutton");
 function toolSetup() {
   drawletter();
   pixels = context.getImageData(0, 0, myPics.width, myPics.height);
-  // setstate("canvas-container");
 }
 
 function displayError() {
@@ -59,7 +57,7 @@ function getpixelcolor(x, y) {
 }
 
 function totalpixels(r, g, b) {
-  const pixelData = context.getImageData(0, 0, 640, 680);
+  const pixelData = context.getImageData(0, 0, myPics.width, myPics.height);
   const all = pixelData.data.length;
   let amount = 0;
   for (i = 0; i < all; i += 4) {

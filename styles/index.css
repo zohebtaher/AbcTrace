@@ -11,8 +11,8 @@
   display: block;
   background: #e2b759;
   /* margin-left: 113px; */
-  height: 90%;
-  width: 100%;
+  height: auto;
+  width: auto;
 
   left: 0;
   top: 0;
@@ -22,7 +22,7 @@
   display: flex;
   align-content: center;
 
-  margin-left: 50px;
+  margin-left: 100px;
   margin-right: 100px;
 
   justify-content: space-between;
@@ -49,6 +49,7 @@
   align-content: center;
   margin: 0;
   padding: 0;
+  align-items: center;
 
   height: 100%;
   width: 100%;
@@ -72,7 +73,7 @@
 h1 {
   font-size: 85px;
   margin-left: 30px;
-  color: rgb(52, 177, 125);
+  color: rgb(0, 0, 0);
   font-family: "Alfa Slab One", cursive;
 }
 
@@ -89,7 +90,7 @@ h1 {
 
 h2 {
   font-size: 70px;
-  color: rgb(52, 177, 125);
+  color: rgb(0, 0, 0);
   font-family: "Dancing Script", cursive;
 }
 
@@ -189,4 +190,19 @@ html {
 
 .linkedin-icon:hover {
   color: #e2b759;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.personal:hover {
+  font-family: "Alfa Slab One", cursive;
+  color: rgb(153, 46, 46);
+}
+.personal {
+  font-family: "Alfa Slab One", cursive;
 }

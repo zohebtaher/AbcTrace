@@ -52,7 +52,7 @@ function getpixelcolor(x, y) {
 }
 
 function totalpixels(r, g, b) {
-  const pixelData = context.getImageData(0, 0, 640, 680);
+  const pixelData = context.getImageData(0, 0, myPics.width, myPics.height);
   const all = pixelData.data.length;
   let amount = 0;
   for (i = 0; i < all; i += 4) {
