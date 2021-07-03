@@ -1,60 +1,47 @@
-# AbcTrace
+# Tracing Fun
 
 ## Background and overview
 
-Reading and writing difficulties among young children during the pandemic is becoming a major concern. Since most language development is done through handwritten sheets and practice books in school , Technology driven games such as ABCYA https://www.abcya.com/games/letter_trace and THE Learning APPs https://www.thelearningapps.com/alphabet-tracing-game-for-kids/ have become essential in teaching children these important lessons. AbcTrace is inspired by these games, its a tool that allows users to practice tracing letters which evenutally will facilitate reading and writing acquisition in young children.
+Reading and writing difficulties among children during the pandemic is becoming a major concern. As most language development is done through handwritten sheets and practice books in school , I decided to create simple tool to practice tracing letters. 
 
-## Functionality and MVPs
+##Technologies
+- Javascript
+- HTML 5
+- CSS
+- Canvas
+- NodeJS
 
-In AbcTrace, users will be able to:
+## Functionality 
 
-- [ ] Trace letters using the mouse or finger on a touchscreen
-- [ ] If the stroke goes outside the boundary of the letter the user will be prompted to try again
-- [ ] if the stroke occupies a pre determined area of the letter a success message is broadcasted
+To create the game logic the underlying raw pixel data was required first. Using pixel manipulation(`getImageData()`) `ImageData` for the canvas obtained. The return value is a `Uint8ClampedArray` a one-dimensional array containing the data in the RGBA format , with integer values between 0 and 255. Once the data was obtained a simple logic using percentages was used to calculate completion of task.
 
-In addition, this project will include:
+```
+function totalpixels(r, g, b) {
+  const pixelData = context.getImageData(0, 0, myPics.width, myPics.height);
+  const all = pixelData.data.length;
+  let amount = 0;
+  for (i = 0; i < all; i += 4) {
+    if (
+      pixelData.data[i] === r &&
+      pixelData.data[i + 1] === g &&
+      pixelData.data[i + 2] === b
+    ) {
+      amount++;
+    }
+  }
+  return amount;
 
-- [ ] An 'About' explaining how the app works.
 
-## Wireframe & file structure
+function calcThreshold() {
+  if (totalpixels(250, 121, 56) / totalpixels(255, 250, 250) > 0.92) {
+    
+    display("win");
 
-### Wireframe
+    context.clearRect(0, 0, myPics.width, myPics.height);
+    toolSetup();
+  }
+}
+```
 
-![Wireframe](design_docs/wireframejavascript.jpeg)
 
-### File structure
 
-/design_docs
-/src
-
-- /assets
-  - empty for right now.
-- index.html
-
-- /styles - index.scss - \_reset.scss
-- .gitignore
-
-- package.json
-- README.md
-- webpack.common.js
-- webpack.dev.js
-- webpack.prod.js
-
-## Architecture and technology
-
-- `JavaScript` for game logic
-- `Canvas API` for rendering
-- `Webpack` for bundling files
-- `CSS` for styling
-
-## Implementation timeline
-
-- Research APIs and setup webpack ~ 1 day
-- game/tool logic ~ 1.5 days
-- Styling and hosting - 1.5 days
-
-## Bonus features
-
-- simple words to trace
-- users can choose a color to trace with
-- background music
