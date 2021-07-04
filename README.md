@@ -2,7 +2,7 @@
 
 ## Background and overview
 
-Reading and writing difficulties among children during the pandemic is becoming a major concern. As most language development is done through handwritten sheets and practice books in school , I decided to create simple tool to practice tracing letters. 
+Reading and writing difficulties among children during the pandemic is becoming a major concern. As most language development is done through handwritten sheets and practice books in school , I decided to create simple tool to practice tracing letters. [Tracing Fun](https://zohebtaher.github.io/AbcTrace/)
 
 ## Technologies
 - Javascript: Most commonly used programming language in web development. Javascript was used in creating the game logic and manipulating the DOM. 
