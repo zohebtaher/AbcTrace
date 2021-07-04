@@ -5,11 +5,11 @@
 Reading and writing difficulties among children during the pandemic is becoming a major concern. As most language development is done through handwritten sheets and practice books in school , I decided to create simple tool to practice tracing letters. 
 
 ##Technologies
-- Javascript
-- HTML 5
-- CSS
-- Canvas
-- NodeJS
+- Javascript: Most commonly used programming language in web development. Javascript was used in creating the game logic and manipulating the DOM. 
+- HTML 5: Building block of the web, used to describe the structure of the web application 
+- CSS: Styling and adding aesthetics for better User Interaction 
+- Canvas : This API was used to draw  graphics and manipulate image data using Javascript
+- NodeJS : Used for installing packages such as webpack,babel etc
 
 ## Functionality 
 
@@ -73,6 +73,7 @@ function drawLine(context, x1, y1, x2, y2) {
   }
 }
 ```
+![tracingfun-error (1)](https://user-images.githubusercontent.com/37554840/124369637-c61e7c80-dc3b-11eb-9764-072a9d017ca2.gif)
 
 
 
