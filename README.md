@@ -78,5 +78,6 @@ function drawLine(context, x1, y1, x2, y2) {
 ![tracingfun-error (1)](https://user-images.githubusercontent.com/37554840/124369637-c61e7c80-dc3b-11eb-9764-072a9d017ca2.gif)
 
 
-
+## Future Direction 
+Currently the application is optimized for mouse click event listeners. Making it mobile friendly and  adding touch event listeners is the next step. 
 
