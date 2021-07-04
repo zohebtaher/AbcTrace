@@ -15,6 +15,9 @@ Reading and writing difficulties among children during the pandemic is becoming 
 
 To create the game logic the underlying raw pixel data was required first. Using pixel manipulation(`getImageData()`) `ImageData` for the canvas obtained. The return value is a `Uint8ClampedArray` a one-dimensional array containing the data in the RGBA format , with integer values between 0 and 255. Once the data was obtained a simple logic using percentages was used to calculate completion of task.
 
+![tracingfun-win (2)](https://user-images.githubusercontent.com/37554840/124369301-578bef80-dc38-11eb-932e-6eece0b270a5.gif)
+
+
 ```
 function totalpixels(r, g, b) {
   const pixelData = context.getImageData(0, 0, myPics.width, myPics.height);
@@ -42,6 +45,35 @@ function calcThreshold() {
   }
 }
 ```
+The logic for handling errors was based on the concept that the canvas has an opacity (`a`) of 0 and the letter an opacity of 1.An error message is displayed when the line is drawn on a pixel with an opacity value of 0. 
+
+```
+function getpixelcolor(x, y) {
+  let index = y * (pixels.width * 4) + x * 4;
+  return {
+    r: pixels.data[index],
+    g: pixels.data[index + 1],
+    b: pixels.data[index + 2],
+    a: pixels.data[index + 3],
+  };
+}
+function drawLine(context, x1, y1, x2, y2) {
+  let color = getpixelcolor(x2, y2);
+  if (color.a === 0) {
+    displayError();
+  } else {
+    context.beginPath();
+    context.strokeStyle = "rgb(250,121,56)";
+    context.lineWidth = 28;
+    context.lineCap = "round";
+    context.moveTo(x1, y1);
+    context.lineTo(x2, y2);
+    context.stroke();
+    context.closePath();
+  }
+}
+```
+
 
 
 
