@@ -11,6 +11,8 @@ Reading and writing difficulties among children during the pandemic is becoming 
 - Canvas : This API was used to draw  graphics and manipulate image data using Javascript
 - NodeJS : Used for installing packages such as webpack,babel etc
 
+![chrome-capture](https://user-images.githubusercontent.com/37554840/124369820-1b5b8d80-dc3e-11eb-88cf-1755713534fc.jpg)
+
 ## Functionality 
 
 To create the game logic the underlying raw pixel data was required first. Using pixel manipulation(`getImageData()`) `ImageData` for the canvas obtained. The return value is a `Uint8ClampedArray` a one-dimensional array containing the data in the RGBA format , with integer values between 0 and 255. Once the data was obtained a simple logic using percentages was used to calculate completion of task.
