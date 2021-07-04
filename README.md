@@ -4,7 +4,7 @@
 
 Reading and writing difficulties among children during the pandemic is becoming a major concern. As most language development is done through handwritten sheets and practice books in school , I decided to create simple tool to practice tracing letters. 
 
-##Technologies
+## Technologies
 - Javascript: Most commonly used programming language in web development. Javascript was used in creating the game logic and manipulating the DOM. 
 - HTML 5: Building block of the web, used to describe the structure of the web application 
 - CSS: Styling and adding aesthetics for better User Interaction 
